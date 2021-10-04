@@ -1,14 +1,21 @@
 {
   "name": "europcar",
+  "proxy": "http://localhost:8000/index.php",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.22.0",
+    "bootstrap": "^5.1.1",
+    "express": "^4.17.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-datepicker": "^4.2.1",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "typescript": "^4.4.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

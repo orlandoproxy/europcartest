@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+        <Button>Test Button</Button>
+        <a>
+        <GetAuth/>
         </a>
       </header>
+
     </div>
+
   );
 }
+
+function GetAuth() {
+  const Data = "Hola";
+  const dataToSend = JSON.stringify({
+    "Function": "LogIn",
+    "LanguageId": "ES",
+    "Password": "0123456789",
+    "ContractId": "0123456789"
+  });
+  fetch("https://www.triyolo.com/ejercicio/rest/index.php?"+dataToSend, {
+  "mode": "no-cors",
+  "method": "Get",
+  "headers": {
+  "charset": "utf-8",
+  "Access-Control-Allow-Origin": "*",
+  "content-type": "application/json",
+  "accept": "application/json"
+  }
+  })
+  .then(
+    function (response) {
+    console.log("nada");
+}
+  )
+  .catch(err => { console.log("nada de nada");
+  });
+  console.log("se jecuto");
+return Data;
+
+}
+
+
 
 export default App;
